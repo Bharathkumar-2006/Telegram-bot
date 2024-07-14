@@ -16,21 +16,30 @@
         <button type="submit">Submit</button>
     </form>
 
-    <script>
-        // Your Firebase config
-        const firebaseConfig = {
-          apiKey: "AIzaSyA05utdBrsfUtJGqJgvCYaME34NockjFt8",
-          authDomain: "telegram-bot-e08ed.firebaseapp.com",
-          projectId: "telegram-bot-e08ed",
-          storageBucket: "telegram-bot-e08ed.appspot.com",
-          messagingSenderId: "571752270710",
-          appId: "1:571752270710:web:e7b9a9f2065c5a06ba4857",
-          measurementId: "G-68E7906X7E"
-        };
+    
+        <script type="module">
+  // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+          import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+          // TODO: Add SDKs for Firebase products that you want to use
+          // https://firebase.google.com/docs/web/setup#available-libraries
+        
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          const firebaseConfig = {
+            apiKey: "AIzaSyA05utdBrsfUtJGqJgvCYaME34NockjFt8",
+            authDomain: "telegram-bot-e08ed.firebaseapp.com",
+            projectId: "telegram-bot-e08ed",
+            storageBucket: "telegram-bot-e08ed.appspot.com",
+            messagingSenderId: "571752270710",
+            appId: "1:571752270710:web:e7b9a9f2065c5a06ba4857",
+            measurementId: "G-68E7906X7E"
+          };
 
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
